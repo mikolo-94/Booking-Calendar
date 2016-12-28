@@ -26,7 +26,7 @@ class CreateBulkRequest extends FormRequest
     public function rules()
     {
         return [
-            'price' => 'required', //Queries the database to get the max number of availbility for the specific room
+            'price' => 'required', 
             'availability' => 'required|digits_between:1,3|max:5',
             'start_date' => 'required|date|date_format:Y-m-d|before:end_date',
             'end_date' => 'required|date|date_format:Y-m-d|after:start_date',
