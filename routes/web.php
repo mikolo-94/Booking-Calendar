@@ -16,23 +16,7 @@ Route::get('/', [
     'uses' => 'CalendarController@showEvents',
     'as' => 'admin'
 ]);
-/*
-Route::get('/', [
-    'uses' => 'CalendarController@showView'
-]);
-*/
-/*
-$uses = 'CalendarController@showView';
-if(request()->ajax())
-{
-    $uses = 'CalendarController@showEvents';
-}
 
-Route::get('/', array(
-    'as'=>'admin'
-,'uses'=> $uses
-));
-*/
 Route::post('/eventupdate', [
     'uses' => 'CalendarController@eventUpdate',
     'as' => 'eventupdate'
@@ -42,16 +26,3 @@ Route::post('/bulkupdate', [
     'uses' => 'CalendarController@bulkUpdate',
     'as' => 'bulkupdate'
 ]);
-
-
-/*
-$uses = 'EventController@showView';
-if($request->wantsJson())
-{
-    $uses = 'EventController@showEvents';
-}
-
-Route::get('/', array(
-    'as'=>'home'
-,'uses'=> $uses
-));*/
